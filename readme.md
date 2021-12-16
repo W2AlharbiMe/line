@@ -6,6 +6,7 @@ my components built using [alpinejs](https://alpinejs.dev/)
 
 - [x] countdown
 - [x] typing effect
+- [x] counter
 - [ ] animated numbers
 - [ ] clipboard
 - [ ] dialog
