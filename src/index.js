@@ -23,7 +23,22 @@
 // powered by Alpinejs...
 import Alpine from 'alpinejs';
 
+import countdown from './components/countdown';
+import counter from './components/counter';
+import typingEffect from './components/typingEffect';
+
+// TODO[FEAT]: lazily load component
+const components = {
+  countdown,
+  counter,
+  typingEffect,
+};
+
 delete Alpine.version;
 
 const line = Alpine;
+
 window.line = line;
+window.components = components;
+
+line.start();
