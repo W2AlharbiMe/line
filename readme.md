@@ -4,9 +4,10 @@ my components built using [alpinejs](https://alpinejs.dev/)
 
 ### Components
 
+- [x] countdown
+- [x] typing effect
 - [ ] animated numbers
 - [ ] clipboard
-- [ ] counter
 - [ ] dialog
 - [ ] password
 - [ ] scroll-progress
@@ -17,4 +18,4 @@ my components built using [alpinejs](https://alpinejs.dev/)
 
 ### Note:
 
-this project uses webpack encore without the option `splitEntryChunks`
+this project uses webpack encore without the options `splitEntryChunks` and `configureBabelPresetEnv`

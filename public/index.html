@@ -4,17 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Line Components</title>
 
 
-  <script src="dist/js/runtime.js"></script>
-  <!-- <script src="dist/js/vendors-node_modules_alpinejs_dist_module_esm_js.js"></script> -->
-  <script src="dist/js/app.js"></script>
+  <script src="dist/js/runtime.js" defer></script>
+  <script src="dist/js/app.js" defer></script>
 </head>
 <body>
   <h1>Hello</h1>
 
-  <span>0</span>
-  <button id="counter">+1</button>
+  <div class="first" x-data="components.counter()">
+    <h1>Counter</h1>
+    <input type="number" placeholder="jump" x-model="jump">
+
+    <p x-text="start"></p>
+
+    <button @click="start = start + parseInt(jump)" x-text="'+' + jump"></button>
+    <button @click="start = start - parseInt(jump)" x-text="'-' + jump"></button>
+  </div>
+
+
+  <div class="second" x-data="components.countdown(5000)">
+    <h1>Countdown</h1>
+
+    <h3 x-text="seconds"></h3>
+  </div>
+
+
+  <div class="second" x-data="components.typingEffect({})">
+    <h1>Typing Text Effect</h1>
+
+    <h2 x-text="text"></h2>
+  </div>
 </body>
 </html>
